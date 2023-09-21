@@ -1,0 +1,164 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the font family and background color for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the container for the main content */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Style the page title */
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Style the form element */
+form {
+    margin-top: 20px;
+}
+
+/* Style form labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style text input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Style subheadings */
+h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Style paragraph text */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Add fade-in animation to various elements */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply animations to specific elements */
+h1, form, p, h2 {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Add hover effect to form elements */
+input[type="text"]:hover, label:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+/* Robot styles */
+.robot {
+    width: 100px;
+    height: 150px;
+    margin: 20px auto;
+    position: relative;
+    animation: wave 2s infinite;
+}
+
+.head {
+    background-color: #333;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.eye {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+}
+
+/* .left-eye {
+    left: 25px;
+}
+
+.right-eye {
+    right: 25px;
+} */
+
+.body {
+    background-color: #333;
+    width: 30px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+/* Waving animation */
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+}
+.left-eye {
+    left: 15px; /* Adjust the left eye's position */
+}
+
+.right-eye {
+    right: 15px; /* Adjust the right eye's position */
+}

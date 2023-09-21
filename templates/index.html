@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langchain Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ShnairTech Assistant</h1>
+        <p>What Kind of info u want</p>
+        
+        <form method="POST">
+            <label for="filter">Select a Filter:</label>
+            <select id="filter" name="filter">
+                <option value="" disabled>Select a filter</option>
+                {% for filter in filters %}
+                    <option value="{{ filter }}" {% if filter == selected_filter %}selected{% endif %}>{{ filter }}</option>
+                {% endfor %}
+            </select>
+            <label for="query">Tell Me:</label>
+            <input type="text" id="query" name="query" required>
+            <button type="submit">Submit</button>
+        </form>
+        <h2>Your Query:</h2>
+        <p>{{ query }}</p>
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+    </div>
+
+    <!-- Robotics Character -->
+    <div class="robot">
+        <div class="head">
+            <div class="eye left-eye"></div>
+            <div class="eye right-eye"></div>
+        </div>
+        <div class="body"></div>
+    </div>
+    <button id="sayHi">Say Hi</button>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
