@@ -3,7 +3,7 @@ import sys
 from flask import Flask, render_template, request, jsonify, session
 from openai import ChatCompletion
 import secrets
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)   # Replace with your own secret key
@@ -62,7 +62,7 @@ def index():
 
             filter_file_path = os.path.join("data", selected_filter)
 
-            # if not os.path.exists(filter_file_path):
+            # if not os.path.exLogicoseists(filter_file_path):
             #     return "Selected filter does not exist.", 400
 
             with open(filter_file_path, "r") as data_file:
@@ -85,7 +85,7 @@ def index():
             chat_history.append((query, answer))
             return render_template("index.html", query=query, answer=answer, pop=pop, filters=[file for file in datafiles ])
 
-    # Retrieve the selected filter from  session (if set)
+    # Retrieve the selected filter from the session (if set)
     selected_filter = session.get('selected_filter', '')
 
     filters = os.listdir("data/")
